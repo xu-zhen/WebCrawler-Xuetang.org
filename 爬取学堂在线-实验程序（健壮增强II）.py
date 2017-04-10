@@ -35,6 +35,7 @@ for num in range(page_num):
         b = b.get_text()
         c = c.get_text().replace('\n','').replace('简介','')
         # print(a, b, c)
+        # 建立一个链接，需要本地安装好mysql环境，端口、用户名、密码需要自行设定
         connection = pymysql.connect(host='localhost', port=3306, user='root', passwd="root", db='test_py2mysql',charset='utf8')
         try:
             cursor = connection.cursor()
